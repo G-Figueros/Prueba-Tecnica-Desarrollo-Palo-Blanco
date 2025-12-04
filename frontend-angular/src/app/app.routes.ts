@@ -1,19 +1,10 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+import { InversionistasComponent } from './inversionistas/inversionistas.component';
+import { ListadoInversionistasComponent } from './pages/listado-inversionistas/listado-inversionistas.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    component: AppComponent
-  },
-  {
-    path: 'inversionista/:id',
-    loadComponent: () =>
-      import('./inversionista-detalle/inversionista-detalle.component')
-        .then(m => m.InversionistaDetalleComponent)
-  },
-  {
-    path: '**',
-    redirectTo: ''
-  }
+  { path: '', component: HomeComponent },               
+  { path: 'inversionistas', component: InversionistasComponent },
+  { path: 'listado', component: ListadoInversionistasComponent },
 ];

@@ -2,8 +2,22 @@
   <div class="logo">Constructora Palo Blanco</div>
 
   <ul class="nav-links">
-    <li><a routerLink="">Inicio</a></li>
-    <li><a routerLink="inversionistas">Registrar Inversionista</a></li>
-    <li><a routerLink="listado">Listado de Inversionistas</a></li>
+    <li>
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Inicio
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="inversionistas" routerLinkActive="active">
+        Registrar Inversionista
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="listado" routerLinkActive="active">
+        Listado de Inversionistas
+      </a>
+    </li>
   </ul>
 </nav>
