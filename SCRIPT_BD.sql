@@ -13,7 +13,7 @@ CREATE TABLE inversionista (
 DELIMITER //
 CREATE PROCEDURE SP_GET_INVERSIONISTAS()
 BEGIN
-    SELECT id, nombre, apellido, inversion, imagen_base64, activo
+    SELECT id, nombre, apellido, inversion, imagen_base64
     FROM inversionista
     ORDER BY id DESC;
 END //
