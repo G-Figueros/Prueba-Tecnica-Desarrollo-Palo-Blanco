@@ -1,0 +1,20 @@
+<h2>Listado de Inversionistas</h2>
+
+<button class="btn" (click)="listar()">Todos</button>
+<button class="btn highlight" (click)="listarMayor()">> 15,000</button>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Inversión</th>
+  </tr>
+
+  <tr *ngFor="let inv of inversionistas">
+    <td>{{ inv.id }}</td>
+    <td>{{ inv.nombre }}</td>
+    <td>{{ inv.apellido }}</td>
+    <td>{{ inv.inversion }}</td>
+  </tr>
+</table>

@@ -1,0 +1,23 @@
+<h2>Detalle del Inversionista</h2>
+
+<p><strong>ID:</strong> {{ inversionista.id }}</p>
+
+<form (ngSubmit)="guardar()">
+
+  <label>Nombre:</label>
+  <input [(ngModel)]="inversionista.nombre" name="nombre" required>
+
+  <label>Apellido:</label>
+  <input [(ngModel)]="inversionista.apellido" name="apellido" required>
+
+  <label>Inversión:</label>
+  <input [(ngModel)]="inversionista.inversion" name="inversion" type="number" required>
+
+  <label>Imagen:</label>
+  <input type="file" (change)="onImageSelected($event)">
+
+  <button type="submit">Guardar cambios</button>
+  <button type="button" (click)="eliminar()">Eliminar</button>
+</form>
+
+<button (click)="volver()">Volver</button>

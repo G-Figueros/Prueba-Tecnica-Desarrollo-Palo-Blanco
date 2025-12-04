@@ -1,0 +1,39 @@
+h2 {
+  color: #4E3B2E;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #A68F7B;
+  color: white;
+}
+
+.btn {
+  margin-right: 10px;
+  background-color: #4E3B2E;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.highlight {
+  background-color: #D4B483;
+  color: #333333;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}

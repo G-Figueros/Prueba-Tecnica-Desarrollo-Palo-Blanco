@@ -1,0 +1,36 @@
+<h2>Registro de Inversionistas</h2>
+
+<form [formGroup]="form" (ngSubmit)="guardar()">
+
+  <label>Nombre:</label>
+  <input formControlName="nombre" />
+
+  <label>Apellido:</label>
+  <input formControlName="apellido" />
+
+  <label>Inversión:</label>
+  <input type="number" formControlName="inversion" />
+
+  <button type="submit" [disabled]="form.invalid">Guardar</button>
+
+</form>
+
+<hr>
+
+<h2>Inversionistas Registrados</h2>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Inversión</th>
+  </tr>
+
+  <tr *ngFor="let inv of inversionistas">
+    <td>{{ inv.id }}</td>
+    <td>{{ inv.nombre }}</td>
+    <td>{{ inv.apellido }}</td>
+    <td>{{ inv.inversion }}</td>
+  </tr>
+</table>

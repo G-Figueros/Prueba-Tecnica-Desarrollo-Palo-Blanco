@@ -1,0 +1,26 @@
+<h1>Listado de Inversionistas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Inversión</th>
+      <th>Estado</th>
+      <th>Detalle</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let inv of inversionistas">
+      <td>{{ inv.id }}</td>
+      <td>{{ inv.nombre }}</td>
+      <td>{{ inv.apellido }}</td>
+      <td>{{ inv.inversion }}</td>
+      <td>
+        <button (click)="verDetalle(inv.id)">Ver detalle</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
