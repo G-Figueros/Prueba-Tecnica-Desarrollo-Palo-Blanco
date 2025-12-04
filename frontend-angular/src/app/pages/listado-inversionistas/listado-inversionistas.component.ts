@@ -25,7 +25,7 @@ export class ListadoInversionistasComponent implements OnInit {
   }
 
   listarMayor() {
-    this.http.get<any[]>('http://localhost:3000/inversionista/mayor')
+    this.http.get<any[]>('http://localhost:3000/inversionistas/mayor')
       .subscribe(data => this.inversionistas = data);
   }
 

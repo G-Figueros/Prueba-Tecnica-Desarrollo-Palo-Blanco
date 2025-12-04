@@ -28,7 +28,7 @@ export class InversionistasComponent implements OnInit {
   }
 
   guardar() {
-    this.http.post('http://localhost:3000/inversionista', this.form.value)
+    this.http.post('http://localhost:3000/inversionistas', this.form.value)
       .subscribe(() => {
         this.form.reset();
         this.listar();
@@ -36,7 +36,7 @@ export class InversionistasComponent implements OnInit {
   }
 
   listar() {
-    this.http.get<any[]>('http://localhost:3000/inversionista')
+    this.http.get<any[]>('http://localhost:3000/inversionistas')
       .subscribe(data => this.inversionistas = data);
   }
 }
